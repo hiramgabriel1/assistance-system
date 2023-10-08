@@ -1,6 +1,7 @@
 import assistantModel from "../models/assistantModel.js";
 
 class studentsAdminAssistant {
+    
   // TODO: get all students assistant
   async getStudentsAssistants(req, res) {
     try {
@@ -29,7 +30,7 @@ class studentsAdminAssistant {
       const isSaveInDatabase = await assistantModel.create(data);
 
       // TODO: query
-      isSaveInDatabase
+      isSaveInDatabase  
         ? res.status(200).json({ message: "success!", isSaved: data })
         : res.status(500).json({
             message: "error",
